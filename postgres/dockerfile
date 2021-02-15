@@ -1,8 +1,9 @@
-FROM postgres:9.4
-ADD init-user-db.sh /docker-entrypoint-initdb.d/
-ENV POSTGRES_DB=faker
+FROM postgres:12.5-alpine
+ADD ./postgres/init-user-db.sh /docker-entrypoint-initdb.d/
+ADD ./postgres/World.sql /data/
+ENV POSTGRES_DB=world
 ENV POSTGRES_USER=raywu
-ENV POSTGRES_PASSWORD=60kg
+ENV POSTGRES_PASSWORD=raywu60kg
 ENV POSTGRES_HOST_AUTH_METHOD=scram-sha-256
-ENV POSTGRES_INITDB_ARGS=--auth-host=scram-sha-256
+ENV POSTGRES_INITDB_ARGS="--auth-host=scram-sha-256 --auth-local=scram-sha-256"
 ENV PGDATA=/var/lib/postgresql/data/pgdata

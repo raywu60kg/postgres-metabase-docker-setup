@@ -35,7 +35,7 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- Name: city; Type: TABLE; Schema: public; Owner: postgres
+-- Name: city; Type: TABLE; Schema: public; Owner: raywu
 --
 
 CREATE TABLE public.city (
@@ -47,10 +47,10 @@ CREATE TABLE public.city (
 );
 
 
-ALTER TABLE public.city OWNER TO postgres;
+ALTER TABLE public.city OWNER TO raywu;
 
 --
--- Name: country; Type: TABLE; Schema: public; Owner: postgres
+-- Name: country; Type: TABLE; Schema: public; Owner: raywu
 --
 
 CREATE TABLE public.country (
@@ -73,10 +73,10 @@ CREATE TABLE public.country (
 );
 
 
-ALTER TABLE public.country OWNER TO postgres;
+ALTER TABLE public.country OWNER TO raywu;
 
 --
--- Name: countrylanguage; Type: TABLE; Schema: public; Owner: postgres
+-- Name: countrylanguage; Type: TABLE; Schema: public; Owner: raywu
 --
 
 CREATE TABLE public.countrylanguage (
@@ -87,10 +87,10 @@ CREATE TABLE public.countrylanguage (
 );
 
 
-ALTER TABLE public.countrylanguage OWNER TO postgres;
+ALTER TABLE public.countrylanguage OWNER TO raywu;
 
 --
--- Data for Name: city; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: city; Type: TABLE DATA; Schema: public; Owner: raywu
 --
 
 INSERT INTO public.city (id, name, countrycode, district, population) VALUES
@@ -4192,7 +4192,7 @@ INSERT INTO public.city (id, name, countrycode, district, population) VALUES
 
 
 --
--- Data for Name: country; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: country; Type: TABLE DATA; Schema: public; Owner: raywu
 --
 
 INSERT INTO public.country (code, name, continent, region, surfacearea, indepyear, population, lifeexpectancy, gnp, gnpold, localname, governmentform, headofstate, capital, code2) VALUES
@@ -4438,7 +4438,7 @@ INSERT INTO public.country (code, name, continent, region, surfacearea, indepyea
 
 
 --
--- Data for Name: countrylanguage; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: countrylanguage; Type: TABLE DATA; Schema: public; Owner: raywu
 --
 
 INSERT INTO public.countrylanguage (countrycode, language, isofficial, percentage) VALUES
@@ -5432,7 +5432,7 @@ INSERT INTO public.countrylanguage (countrycode, language, isofficial, percentag
 
 
 --
--- Name: city city_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: city city_pkey; Type: CONSTRAINT; Schema: public; Owner: raywu
 --
 
 ALTER TABLE ONLY public.city
@@ -5440,7 +5440,7 @@ ALTER TABLE ONLY public.city
 
 
 --
--- Name: country country_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: country country_pkey; Type: CONSTRAINT; Schema: public; Owner: raywu
 --
 
 ALTER TABLE ONLY public.country
@@ -5448,7 +5448,7 @@ ALTER TABLE ONLY public.country
 
 
 --
--- Name: countrylanguage countrylanguage_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: countrylanguage countrylanguage_pkey; Type: CONSTRAINT; Schema: public; Owner: raywu
 --
 
 ALTER TABLE ONLY public.countrylanguage
@@ -5456,14 +5456,14 @@ ALTER TABLE ONLY public.countrylanguage
 
 
 --
--- Name: idx_countrycode; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_countrycode; Type: INDEX; Schema: public; Owner: raywu
 --
 
 CREATE INDEX idx_countrycode ON public.city USING hash (countrycode);
 
 
 --
--- Name: country country_capital_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: country country_capital_fkey; Type: FK CONSTRAINT; Schema: public; Owner: raywu
 --
 
 ALTER TABLE ONLY public.country
@@ -5471,7 +5471,7 @@ ALTER TABLE ONLY public.country
 
 
 --
--- Name: countrylanguage countrylanguage_countrycode_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: countrylanguage countrylanguage_countrycode_fkey; Type: FK CONSTRAINT; Schema: public; Owner: raywu
 --
 
 ALTER TABLE ONLY public.countrylanguage

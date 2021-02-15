@@ -6,9 +6,10 @@ verify_ssl = true
 [dev-packages]
 pylint = "*"
 flake8 = "*"
+autopep8 = "*"
 
 [packages]
-psycopg2 = "==2.8.6"
+psycopg2-binary = "==2.8.6"
 
 [requires]
 python_version = "3.6"
