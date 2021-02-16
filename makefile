@@ -6,7 +6,7 @@ postgres-up:
 	docker run -d \
         --rm \
 	    --name postgres \
-		--network=host
+		--network=host \
 		-p 5432:5432 \
 	    raywu60kg/postgres:${TAG}
 
@@ -21,8 +21,11 @@ postgres-up:
 postgres-exec:
 	docker exec -it postgres psql -U raywu world
 
-postgres-load-data:
+postgres-load-world-data:
 	docker exec -it postgres psql -U raywu world -f /data/World.sql
+
+postgres-load-metabase-data:
+	docker exec -it postgres psql -U raywu metabase -f /data/Metabase.sql
 
 metabase-up:
 	docker run -d -p 3000:3000 \
