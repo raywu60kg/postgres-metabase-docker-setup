@@ -1,4 +1,5 @@
 # postgres-docker-cluster-setup
+![image](pictures/docker_postgres_metabase.png)
 ## postgres info
 - username: raywu
 - password: raywu60kg
