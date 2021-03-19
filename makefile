@@ -36,4 +36,4 @@ metabase-up:
 		-e "MB_DB_PASS=raywu60kg" \
 		-e "MB_DB_HOST=localhost" \
 		--network=host \
-		--name metabase metabase/metabase
+		--name metabase metabase/metabase:v0.37.9
